@@ -1,0 +1,6 @@
+{
+  "name": "Green Guardian AI",
+  "description": "An AI-powered plant disease detection and care assistant with a personalized plant profile and treatment dashboard.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: 'Instrument Serif', Georgia, Cambria, serif;
+
+  /* Custom Forest Green Palette mappings for emerald, teal, and green */
+  --color-emerald-50: #f1fcf6;
+  --color-emerald-100: #dbf7e9;
+  --color-emerald-200: #b5edd1;
+  --color-emerald-300: #8ae0b4;
+  --color-emerald-400: #5ecf95;
+  --color-emerald-500: #1bb36e; /* Energetic Leaf Green */
+  --color-emerald-600: #159458; /* Rich Classic Green */
+  --color-emerald-700: #107c47; /* Elegant Dark Forest Green */
+  --color-emerald-800: #0a6237; /* Clean Pine Green */
+  --color-emerald-900: #064827; /* Deep Spruce Green */
+  --color-emerald-955: #04321b;
+
+  --color-teal-50: #f1fcf6;
+  --color-teal-100: #dbf7e9;
+  --color-teal-200: #b5edd1;
+  --color-teal-300: #8ae0b4;
+  --color-teal-400: #5ecf95;
+  --color-teal-500: #1bb36e;
+  --color-teal-600: #159458;
+  --color-teal-700: #107c47;
+  --color-teal-800: #0a6237;
+  --color-teal-900: #064827;
+  --color-teal-950: #04321b;
+
+  --color-green-50: #f1fcf6;
+  --color-green-100: #dbf7e9;
+  --color-green-200: #b5edd1;
+  --color-green-300: #8ae0b4;
+  --color-green-400: #5ecf95;
+  --color-green-500: #1bb36e;
+  --color-green-600: #159458;
+  --color-green-700: #107c47;
+  --color-green-800: #0a6237;
+  --color-green-900: #064827;
+  --color-green-950: #04321b;
+}
+
+/* Custom Print Styles for PDF Generation */
+@media print {
+  body {
+    background: white !important;
+    color: #1c1917 !important; /* stone-900 */
+    font-size: 12pt !important;
+  }
+  
+  /* Hide everything by default for print */
+  body > div:not(.print-report) {
+    display: none !important;
+  }
+
+  /* Show only the printable report */
+  .print-report {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Prevent background clipping */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* Smooth transition for theme switching */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
