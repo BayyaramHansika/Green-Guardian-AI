@@ -70,7 +70,3 @@ package.json
 * User authentication
 * Cloud deployment support
 
-## Author
-
-Bayyaram Hansika
-
